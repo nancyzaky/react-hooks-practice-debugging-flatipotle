@@ -6,13 +6,13 @@ import "./App.css";
 
 function App() {
   const [orders, setOrders] = useState([]);
-
+  console.log(orders);
   function addOrder(order) {
     setOrders(orders.concat(order));
   }
 
   const displayOrders = orders.map((order, idx) => {
-    <Order key={idx} {...order} />;
+    return <Order key={idx} orders={orders} />;
   });
 
   return (
@@ -20,7 +20,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <Form />
+      <Form addOrder={addOrder} orders={orders} setOrders={setOrders} />
       <div className="ui raised container segment">
         <h1 className="ui block header">All Orders</h1>
         <div className="ui three cards">{displayOrders}</div>

@@ -6,6 +6,7 @@ import sofritas from "../images/protein/sofritas.png";
 import steak from "../images/protein/steak.png";
 
 function ProteinForm(props) {
+  console.log(props.protein);
   return (
     <>
       <h1>
@@ -20,7 +21,7 @@ function ProteinForm(props) {
               value="Barbacoa"
               name="protein"
               checked={props.protein.includes("Barbacoa")}
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={barbacoa} height="100px" width="100px" alt="barbacoa" />
             <label htmlFor="barbacoa">Barbacoa</label>
@@ -35,7 +36,7 @@ function ProteinForm(props) {
               value="Steak"
               name="protein"
               checked={props.protein.includes("Steak")}
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={steak} height="100px" width="100px" alt="steak" />
             <label htmlFor="steak">Steak</label>
@@ -50,7 +51,7 @@ function ProteinForm(props) {
               value="Chicken"
               name="protein"
               checked={props.protein.includes("Chicken")}
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={chicken} height="100px" width="100px" alt="chicken" />
             <label htmlFor="chicken">Chicken</label>
@@ -65,7 +66,7 @@ function ProteinForm(props) {
               value="Carnitas"
               name="protein"
               checked={props.protein.includes("Carnitas")}
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={carnitas} height="100px" width="100px" alt="carnitas" />
             <label htmlFor="carnitas">Carnitas</label>
@@ -80,7 +81,7 @@ function ProteinForm(props) {
               value="Sofritas"
               name="protein"
               checked={props.protein.includes("Sofritas")}
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={sofritas} height="100px" width="100px" alt="sofritas" />
             <label htmlFor="sofritas">Sofritas</label>
